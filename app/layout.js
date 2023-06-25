@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import Nav from "@components/nav";
 
 const montserrat = Montserrat({
   weight: ["300", "400"],
@@ -15,8 +16,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl">
+    <html lang="nl" className="scroll-smooth">
       <body className={` text-black ${montserrat.className}`}>
+        <Nav />
         <div class="background">
           <div></div>
           <div></div>

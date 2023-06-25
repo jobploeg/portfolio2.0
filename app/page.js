@@ -1,17 +1,16 @@
-import Nav from "@components/nav";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
-      <Nav />
+    <div>
       <main>
-        <div className="lg:snap-y h-screen overflow-scroll mx-5 lg:mx-0">
+        <div className="lg:snap-y h-screen overflow-scroll px-5 lg:mx-0">
           <div
-            class="flex justify-center items-center h-screen snap-start w-screen -mt-20"
+            className="flex justify-center items-center h-screen snap-start w-screen -mt-20"
             id="me"
           >
-            <div data-aos="fade-up" className="select-none">
+            <div className="select-none">
               <Image
                 src="/img/me.webp"
                 alt="me"
@@ -20,7 +19,7 @@ export default function Home() {
                 className="rounded-full h-[300px] w-auto shadow lg:mr-20 hidden lg:block"
               />
             </div>
-            <div className="lg:w-3/6" data-aos="fade-up">
+            <div className="lg:w-3/6">
               <p className="opacity-80">Software developer</p>
               <h1 className="font-bold leading-relaxed">Job van der Ploeg</h1>
               <p>
@@ -29,7 +28,7 @@ export default function Home() {
                 webdevelopment. Ik vind het leuk om nieuwe talen en technieken
                 te leren. Het leukste vind ik het om mensen te helpen een mooie
                 website te maken. Verder vind ik het leuk om te hardlopen. En
-                als ik tijd over heb lees ik graag met een kop slow koffie!
+                als ik tijd over heb lees ik graag met een kop koffie!
               </p>
               <div className="mt-5">
                 <a href="src/img/CV.pdf" target="_blank">
@@ -41,58 +40,44 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="h-auto w-screen snap-center mt-20" id="portfolio">
-            <div
-              className="flex lg:w-5/6 lg:justify-center mb-20 "
-              data-aos="fade-up"
-            >
+          <div className="h-auto w-auto snap-center mt-20" id="portfolio">
+            <div className="flex lg:w-5/6 lg:justify-center mb-20 ">
               <div className="relative group lg:w-5/6">
                 <h2 className="font-bold leading-relaxed">Projecten</h2>
                 <span className="absolute w-0 h-1 bg-amber-300 w-20"></span>
               </div>
             </div>
             <div className="grid leading-relaxed lg:grid-cols-2 lg:gap-32 gap-24 lg:mx-48">
-              <div className="flex" data-aos="fade-up">
+              <div className="flex">
                 <p className="font-black text-amber-300 flex mr-10 text-5xl">
                   1
                 </p>
                 <div>
                   <a href="tracker">
-                    <h3 className="font-medium mb-1">Gewicht tracker</h3>
-                    <p className="opacity-90">
-                      Een eigen project om mijn kennis van Laravel bij te
-                      schaven. Mijn moeder wilde graag een website waar ze haar
-                      <b>gewicht</b> kan bijhouden. Ik heb dit project gemaakt
-                      met
-                      <b>Laravel</b> en <b>Tailwind</b>. Ik heb de library
-                      <b>Chart.js</b> gebruikt voor de grafieken. De gebruiker
-                      kan zich <b>registreren</b> of hij/zij <b>inloggen</b>. De
-                      klant kan zijn/haar gewicht invoeren en de website houdt
-                      dit vervolgens bij. Via een grafiek kan de gebruiker
-                      zijn/haar gewicht zien. Verder wordt het <b>BMI</b> ook
-                      bijgehouden.
+                    <h3 className="font-medium mb-1">Webshop</h3>
+                    <p className="text-gray-800">
+                      Voor mijn eindstage project heb ik een webshop gemaakt met{" "}
+                      <b>Next.js</b>. Ik heb een frontend gemaakt. De data kwam
+                      via de <b>Woocommerce REST API</b>. Verder heb ik de
+                      website gemaakt met <b>Tailwind</b>. Voor de website heb
+                      ik sortering en filtering gemaakt. Ook heb ik een product
+                      overzicht pagina gemaakt met afbeelding carousel, product
+                      informatie en reviews.
                     </p>
                   </a>
-                  <a href="tracker">
+                  <Link href="/webshop">
                     <button className="button mt-3">Meer</button>
-                  </a>
-                  <a
-                    href="http://gewicht.jobvanderploeg.nl"
-                    target="_blank"
-                    className="ml-2"
-                  >
-                    <button className="button mt-3">Demo</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <div className="flex" data-aos="fade-up">
+              <div className="flex">
                 <p className="font-black text-amber-300 flex mr-10 text-5xl">
                   2
                 </p>
                 <div>
-                  <a href="praktijk">
+                  <Link href="/massagepraktijk">
                     <h3 className="font-medium mb-1">Massagepraktijk</h3>
-                    <p className="opacity-90">
+                    <p className="text-gray-800">
                       Een project voor een <b>klant.</b> De klant wilde een
                       website voor haar massagepraktijk. Dit project hebben we
                       met drie personen gemaakt. We hebben samengewerkt met een
@@ -102,20 +87,20 @@ export default function Home() {
                       hebben we gebruik gemaakt van de
                       <b>Google calendar API</b>
                     </p>
-                  </a>
-                  <a href="praktijk">
+                  </Link>
+                  <Link href="/massagepraktijk">
                     <button className="button mt-3">Meer</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <div className="flex" data-aos="fade-up">
+              <div className="flex">
                 <p className="font-black text-amber-300 flex mr-10 text-5xl">
                   3
                 </p>
                 <div>
-                  <a href="portfolio">
+                  <Link href="/portfolio">
                     <h3 className="font-medium mb-1">Portfolio</h3>
-                    <p className="opacity-90">
+                    <p className="text-gray-800">
                       Deze website. Dit project heb ik met HTML, Tailwind en JS
                       gemaakt. Verder heb ik <b>AOS JS</b> gebruikt voor de
                       scroll animaties. Ik gebruik <b>VITE</b> als build tool.
@@ -125,20 +110,20 @@ export default function Home() {
                       is en een website met een <b>Google lighthouse score</b>{" "}
                       van 100%.
                     </p>
-                  </a>
-                  <a href="portfolio">
+                  </Link>
+                  <Link href="/portfolio">
                     <button className="button mt-3">Meer</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <div className="flex" data-aos="fade-up">
+              <div className="flex">
                 <p className="font-black text-amber-300 flex mr-10 text-5xl">
                   4
                 </p>
                 <div>
-                  <a href="coachpraktijk">
+                  <Link href="/coachpraktijk">
                     <h3 className="font-medium mb-1">Coachpraktijk</h3>
-                    <p className="opacity-90">
+                    <p className="text-gray-800">
                       Een website voor een klant. De <b>klant</b> heeft een
                       coachpraktijk. Hiervoor wilde ze een website. Een
                       <b>eis</b> was dat de website volledig aanpasbaar is door
@@ -147,10 +132,10 @@ export default function Home() {
                       <b>opzetten</b> van de website en help ik met het{" "}
                       <b>beheren</b> van de website.
                     </p>
-                  </a>
-                  <a href="coachpraktijk">
+                  </Link>
+                  <Link href="/coachpraktijk">
                     <button className="button mt-3">Meer</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -160,7 +145,7 @@ export default function Home() {
             id="contact"
           >
             <div>
-              <div className="relative group" data-aos="fade-up">
+              <div className="relative group">
                 <h2 className="font-bold leading-relaxed">Contact</h2>
                 <span className="absolute w-0 h-1 bg-amber-300 w-20"></span>
                 <p className="mt-5">
@@ -189,7 +174,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col gap-4" data-aos="fade-up">
+            <div className="flex flex-col gap-4">
               <a
                 href="https://github.com/jobploeg"
                 className="ease-out hover:-translate-y-2 transition-all flex items-center gap-5 mt-3 lg:mt-0"
@@ -239,6 +224,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
