@@ -6,12 +6,12 @@ export default function Home() {
     <>
       <Nav />
       <main>
-        <div className="lg:snap-y snap-mandatory h-screen overflow-scroll mx-5 lg:mx-0">
+        <div className="lg:snap-y h-screen overflow-scroll mx-5 lg:mx-0">
           <div
-            class="flex justify-center items-center h-screen snap-start w-screen"
+            class="flex justify-center items-center h-screen snap-start w-screen -mt-20"
             id="me"
           >
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" className="select-none">
               <Image
                 src="/img/me.webp"
                 alt="me"
@@ -35,18 +35,15 @@ export default function Home() {
                 <a href="src/img/CV.pdf" target="_blank">
                   <button className="button">Mijn CV</button>
                 </a>
-                <a href="index#contact">
+                <a href="index#contact" className="ml-2">
                   <button className="button">Contact</button>
                 </a>
               </div>
             </div>
           </div>
-          <div
-            className="h-auto w-screen snap-center snap-proximity"
-            id="portfolio"
-          >
+          <div className="h-auto w-screen snap-center mt-20" id="portfolio">
             <div
-              className="flex lg:w-5/6 lg:justify-center mb-20"
+              className="flex lg:w-5/6 lg:justify-center mb-20 "
               data-aos="fade-up"
             >
               <div className="relative group lg:w-5/6">
@@ -79,7 +76,11 @@ export default function Home() {
                   <a href="tracker">
                     <button className="button mt-3">Meer</button>
                   </a>
-                  <a href="http://gewicht.jobvanderploeg.nl" target="_blank">
+                  <a
+                    href="http://gewicht.jobvanderploeg.nl"
+                    target="_blank"
+                    className="ml-2"
+                  >
                     <button className="button mt-3">Demo</button>
                   </a>
                 </div>
