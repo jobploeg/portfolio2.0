@@ -1,14 +1,13 @@
 export default function Page() {
   return (
     <main>
-      <div className="flex items-center flex-col lg:mt-[15vh] mt-[15vh] mb-10  mx-5 lg:mx-0 gap-10">
-        <div className="relative group">
-          <h1 className="font-bold leading-relaxed">Coachpraktijk</h1>
-          <span className="absolute w-0 h-1 bg-amber-300 w-20"></span>
-        </div>
-      </div>
-
       <div className="lg:w-1/2 lg:mx-[25%] mx-3">
+        <div className="flex items-start flex-col lg:mt-[15vh] mt-[15vh] mb-10  mx-5 lg:mx-0 gap-10">
+          <div className="relative group">
+            <h1 className="font-bold leading-relaxed">Coachpraktijk</h1>
+            <span className="absolute w-0 h-1 bg-amber-300 w-20"></span>
+          </div>
+        </div>
         <p>
           Via mijn oude bijbaan ben ik iemand tegengekomen die een website wilde
           voor haar nieuwe coachpraktijk. Ze wilde een website met informatie
