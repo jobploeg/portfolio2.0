@@ -1,9 +1,9 @@
 export default function Page() {
   return (
     <main>
-      <div className="lg:w-1/2 lg:mx-[25%] mx-3 h-fit">
+      <div className="lg:w-1/2 lg:mx-[25%] mx-3">
         <div className="flex items-start flex-col lg:mt-[20vh] mt-[15vh] mb-10  mx-5 lg:mx-0 gap-10">
-          <div className="relative group">
+          <div className="group">
             <h1 className="font-bold leading-relaxed">Massagepraktijk</h1>
             <span className="absolute w-0 h-1 bg-amber-300 w-20"></span>
           </div>
@@ -31,7 +31,7 @@ export default function Page() {
           we zo snel mogelijk gedaan. Hierna zijn we begonnen met programmeren.
         </p>
 
-        <div className="relative group">
+        <div className="group">
           <h3 className="pt-10">Problemen</h3>
           <span className="absolute w-0 h-0.5 bg-amber-300 w-20"></span>
         </div>
@@ -51,7 +51,7 @@ export default function Page() {
           en is overzichtelijk in gebruik voor de klant.
         </p>
 
-        <div className="relative group">
+        <div className="group">
           <h3 className="pt-10">Technieken</h3>
           <span className="absolute w-0 h-0.5 bg-amber-300 w-20"></span>
         </div>
@@ -68,7 +68,7 @@ export default function Page() {
           <li>Library voor Laravel en Google API</li>
         </ul>
 
-        <div className="relative group">
+        <div className="group">
           <h3>Conclusie</h3>
           <span className="absolute w-0 h-0.5 bg-amber-300 w-20"></span>
         </div>

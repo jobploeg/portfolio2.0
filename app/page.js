@@ -19,22 +19,24 @@ export default function Home() {
                 className="rounded-full h-[300px] w-auto shadow lg:mr-20 hidden lg:block"
               />
             </div>
-            <div className="lg:w-3/6 ">
-              <p className="opacity-80">Software developer</p>
+            <div className="lg:w-2/6 ">
+              <p className="opacity-80 text-lg">
+                Frontend developer bij{" "}
+                <Link href="https://www.broekhuis.nl" target="_blank">
+                  Broekhuis
+                </Link>
+              </p>
               <h1 className="font-bold leading-relaxed">Job van der Ploeg</h1>
               <p>
-                Hoi, ik ben Job van der Ploeg. Ik ben een student software
-                development. Ik focus mij momenteel vooral op fullstack
-                webdevelopment. Ik vind het leuk om nieuwe talen en technieken
-                te leren. Het leukste vind ik het om mensen te helpen een mooie
-                website te maken. Verder vind ik het leuk om te hardlopen. En
-                als ik tijd over heb lees ik graag met een kop koffie!
+                Hoi! ik ben Job van der Ploeg. Ik werk als frontend developer
+                bij Broekhuis. Ik werk graag met react. Verder heb ik ook
+                ervaring met vanilla JS. Naast mijn werk loop ik graag hard!
               </p>
               <div className="mt-5">
-                <a href="src/img/CV.pdf" target="_blank">
+                <a href="/img/CV.pdf" target="_blank">
                   <button className="button">Mijn CV</button>
                 </a>
-                <a href="index#contact" className="ml-2">
+                <a href="#contact" className="ml-2">
                   <button className="button">Contact</button>
                 </a>
               </div>
@@ -53,21 +55,19 @@ export default function Home() {
                   1
                 </p>
                 <div>
-                  <a href="tracker">
-                    <h3 className="font-medium mb-1">Webshop</h3>
-                    <p className="text-gray-800">
-                      Voor mijn eindstage project heb ik een webshop gemaakt met{" "}
-                      <b>Next.js</b>. Ik heb een frontend gemaakt. De data kwam
-                      via de <b>Woocommerce REST API</b>. Verder heb ik de
-                      website gemaakt met <b>Tailwind</b>. Voor de website heb
-                      ik sortering en filtering gemaakt. Ook heb ik een product
-                      overzicht pagina gemaakt met afbeelding carousel, product
-                      informatie en reviews.
-                    </p>
-                  </a>
-                  <Link href="/webshop">
+                  <h3 className="font-medium mb-1">Webshop</h3>
+                  <p className="text-gray-800">
+                    Voor mijn eindstage project heb ik een webshop gemaakt met{" "}
+                    <b>Next.js</b>. Ik heb een frontend gemaakt. De data kwam
+                    via de <b>Woocommerce REST API</b>. Verder heb ik de website
+                    gemaakt met <b>Tailwind</b>. Voor de website heb ik
+                    sortering en filtering gemaakt. Ook heb ik een product
+                    overzicht pagina gemaakt met afbeelding carousel, product
+                    informatie en reviews.
+                  </p>
+                  {/* <Link href="/webshop">
                     <button className="button mt-3">Meer</button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <div className="flex">
@@ -160,12 +160,12 @@ export default function Home() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     className="w-12 h-12"
                   >
                     <path
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                     />

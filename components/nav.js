@@ -6,7 +6,11 @@ import { useState } from "react";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleHeader = () => setIsOpen((prev) => !prev);
+  const toggleHeader = () => {
+    if (window.innerWidth <= 768) {
+      setIsOpen((prev) => !prev);
+    }
+  };
 
   return (
     <nav>
@@ -134,13 +138,13 @@ export default function Nav() {
 
         <ul className="flex flex-col lg:flex-row lg:gap-10 gap-4 items-center lg:my-0 my-32 lg:h-20 text-3xl lg:text-xl">
           <li className="relative group">
-            <Link href="#me" onClick={toggleHeader}>
+            <Link href="/#me" onClick={toggleHeader}>
               Me
             </Link>
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-amber-300 transition-all group-hover:w-full"></span>
           </li>
           <li className="relative group">
-            <Link href="#portfolio" onClick={toggleHeader}>
+            <Link href="/#portfolio" onClick={toggleHeader}>
               Portfolio
             </Link>
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-amber-300 transition-all group-hover:w-full"></span>
@@ -152,7 +156,7 @@ export default function Nav() {
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-amber-300 transition-all group-hover:w-full"></span>
           </li>
           <li className="relative group">
-            <Link href="#contact" onClick={toggleHeader}>
+            <Link href="/#contact" onClick={toggleHeader}>
               Contact
             </Link>
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-amber-300 transition-all group-hover:w-full"></span>
